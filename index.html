@@ -1,0 +1,142 @@
+<!-- Credit Goes to mishrabiswajit.github.io -->
+
+<html>
+<head>
+    <title>LinuxGuy312's Bio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nanum+Gothic&family=Roboto+Condensed:wght@300&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0px;
+            background-color: rgb(40, 37, 53);
+        }
+
+        .shadow_1 {
+            animation-name: bio_entry_animation_right;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+        }
+
+        .shadow_2 {
+            animation-name: bio_entry_animation_left;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+        }
+
+        @keyframes bio_entry_animation_left {
+            from {
+                position: relative;
+                right: 100%;
+            }
+            to {
+                position: relative;
+                right: 0%;
+
+            }
+        }
+
+        @keyframes bio_entry_animation_right {
+            from {
+                position: relative;
+                left: 100%;
+            }
+            to {
+                position: relative;
+                left: 0%;
+
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            height: auto;
+        }
+
+        h3 {
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 5px;
+            display: block;
+            text-decoration: underline dotted;
+            text-shadow: 0px 0px 20px darkviolet;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .info {
+            font-family: 'Roboto Mono', monospace;
+            color: aqua;
+            text-align: center;
+            padding: 30px 30px 20px 30px;
+        }
+
+        a:hover {
+            color: violet;
+        }
+
+        .logo {
+            margin: 10px;
+            align-self: center;
+            box-shadow: 3px 2px 7px lightslategray;
+            border-radius: 5px;
+        }
+
+        div p a {
+            text-decoration: none;
+            color: lime;
+        }
+
+        .socials {
+            align-self: center;
+            margin: 20px;
+        }
+
+        .socials a img {
+            width: 35px;
+            margin: 0px 10px;
+            transition: transform .2s
+        }
+
+        .socials a img:hover {
+            transform: scale(1.5);
+            margin: 0px 10px;
+        }
+
+        img {
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3 class="shadow_2"><a href="http://LinuxGuy312.github.io"></a><strong>MY BIO</strong></h3>
+    <div class="container">
+        <div class="logo shadow_1"><img width="200px" src="https://telegra.ph/file/9153d739516bf56e4f5e7.jpg" alt="Yoshitsu"></div>
+        <div class="info shadow_2">
+            <p>My name is Yoshitsu Tamesuro.</p>
+            <p>I am 17 yrs old.</p>
+            <p>I am a student of class 12.</p>
+            <p>I know Python and A bit of web designing. <br>Currently Learning C++ & Javascript</p>
+            <p><a href="https://github.com/AllProgrammes" target="_blank">You can click on here to learn or take help
+                    from my git org if
+                    you want</a></p>
+            <p></p>
+        </div>
+        <div class="socials  shadow_1">
+            <a href="https://github.com/LinuxGuy312" target="_blank"><img
+                    src="https://telegra.ph/file/a16e76df6181e6439b981.png" alt="GitHub"></a>
+            <a href="https://www.instagram.com/w_h_24.11/" target="_blank"><img
+                    src="https://telegra.ph/file/bd28e0a19faced99c3171.png" alt="Instagram"></a>
+            <a href="https://t.me/WH0907" target="_blank"><img
+                    src="https://telegra.ph/file/6d39037d3ff66a37dbda1.png" alt="Telegram"></a>
+        </div>
+    </div>
+</body>
+</html>
