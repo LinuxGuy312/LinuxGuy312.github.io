@@ -1,7 +1,6 @@
 <!-- Credit Goes to mishrabiswajit.github.io -->
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>LinuxGuy312's Bio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,44 +13,25 @@
             background-color: rgb(40, 37, 53);
         }
 
-        .shadow_1 {
-            animation-name: bio_entry_animation_right;
-            animation-duration: 2s;
-            animation-iteration-count: 1;
-            animation-timing-function: ease;
+        .an_1 {
+            opacity: 0;
+            animation: Slide_Up 1s ease forwards;
         }
 
-        .shadow_2 {
-            animation-name: bio_entry_animation_left;
-            animation-duration: 2s;
-            animation-iteration-count: 1;
-            animation-timing-function: ease;
+        .an_2 {
+            opacity: 0;
+            animation: Slide_Up 1s ease 1s forwards;
         }
 
-        @keyframes bio_entry_animation_left {
-            from {
-                position: relative;
-                right: 100%;
-            }
-            to {
-                position: relative;
-                right: 0%;
-
-            }
+        .an_3 {
+            opacity: 0;
+            animation: Slide_Up 1s ease 2s forwards;
         }
 
-        @keyframes bio_entry_animation_right {
-            from {
-                position: relative;
-                left: 100%;
-            }
-            to {
-                position: relative;
-                left: 0%;
-
-            }
+        .an_4{
+            opacity: 0;
+            animation: Slide_Up 1s ease 3s forwards;
         }
-
         .container {
             display: flex;
             flex-direction: column;
@@ -116,14 +96,24 @@
             border-radius: 5px;
         }
 
+        @keyframes Slide_Up {
+            0%{
+                opacity: 0;
+                transform: translateY(100%);
+            }
+            100%{
+                opacity: 100%;
+                transform: translateY(0%);
+            }
+        }
     </style>
 </head>
 
 <body>
-    <h3 class="shadow_2"><strong>MY BIO</strong></h3>
+    <h3 class="an_1"><strong>MY BIO</strong></h3>
     <div class="container">
-        <div class="logo shadow_1"><a href="http://LinuxGuy312.github.io"><img width="300px" src="https://telegra.ph/file/9153d739516bf56e4f5e7.jpg" alt=""></a></div>
-        <div class="info shadow_2">
+        <div class="logo an_2"><a href="http://LinuxGuy312.github.io"><img width="200px" src="https://telegra.ph/file/9153d739516bf56e4f5e7.jpg" alt="Yoshitsu"></a></div>
+        <div class="info an_3">
             <p>My name is Yoshitsu Tamesuro.</p>
             <p>I am 17 yrs old.</p>
             <p>I am a student of class 12.</p>
@@ -133,7 +123,7 @@
                     you want</a></p>
             <p></p>
         </div>
-        <div class="socials  shadow_1">
+        <div class="socials  an_4">
             <a href="https://github.com/LinuxGuy312" target="_blank"><img src="https://telegra.ph/file/a16e76df6181e6439b981.png" alt="GitHub"></a>
             <a href="https://www.instagram.com/w_h_24.11/" target="_blank"><img src="https://telegra.ph/file/bd28e0a19faced99c3171.png" alt="Instagram"></a>
             <a href="https://t.me/WH0907" target="_blank"><img src="https://telegra.ph/file/6d39037d3ff66a37dbda1.png" alt="Telegram"></a>
