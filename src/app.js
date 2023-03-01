@@ -3,6 +3,24 @@ const hover = document.querySelector('.hover');
 const modal = document.querySelector('.modal');
 const close = document.querySelector('.close');
 
+//loaderStart
+const loads = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
+const loader = document.getElementById('pre-loader');
+const loaderText = document.getElementById('pre-loader-text')
+let interval = null;
+loaderText.onclick = event => {
+  let iteration = 0;
+  clearInterval(interval);
+  interval = setInterval(() => {event.target.innerText = event.target.dataset.value.split("").map((_letter, index) => {if(index < iteration) {return event.target.dataset.value[index];}return loads[Math.floor(Math.random() * 62)]}).join("");if(iteration >= event.target.dataset.value.length){clearInterval(interval);} iteration += 1 / 3;}, 30);
+  setTimeout(unload, 2500);
+}
+
+function unload(){
+  loader.style.zIndex = 0;
+  loader.style.opacity = 0;
+}
+//loaderEnd
+
 function show() {
      hover.classList.add('active');
      modal.classList.add('show');
@@ -164,3 +182,4 @@ particlesJS("particles-js", {
      },
      retina_detect: true
    })
+

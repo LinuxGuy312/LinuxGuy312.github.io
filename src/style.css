@@ -38,6 +38,31 @@ body{
     background-position: 50% 50%;
   }
 
+.pre-loader {
+    position: fixed;
+    z-index: 99999;
+    background-color: #100b16;
+    width: 100vw;
+    height: 100vh;
+    color: #e8e1ef;
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.25rem;
+    transition: all 250ms linear;
+}
+
+h1:hover {
+    cursor: pointer;
+    background-color: #e8e1ef;
+    color: #100b16;
+    border-radius: .25em;
+    padding: 1rem 2rem;
+    transition: all 200ms linear;
+}
+
 .dark .container{
     padding: 20px;
     display: flex;
