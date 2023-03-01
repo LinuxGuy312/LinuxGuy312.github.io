@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 :root   {
@@ -61,6 +61,10 @@ h1:hover {
     border-radius: .25em;
     padding: 1rem 2rem;
     transition: all 200ms linear;
+}
+
+.container {
+    font-family: 'Poppins', sans-serif;
 }
 
 .dark .container{
