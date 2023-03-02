@@ -4,21 +4,26 @@ const modal = document.querySelector('.modal');
 const close = document.querySelector('.close');
 
 //loaderStart
-const loads = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
-const loader = document.getElementById('pre-loader');
-const loaderText = document.getElementById('pre-loader-text')
-let interval = null;
-loaderText.onclick = event => {
+const loader = document.getElementById('loader');
+const loaderText = document.getElementById('loader-text')
+
+function load(){
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
+  let interval = null;
   let iteration = 0;
+  const value = loaderText.dataset.value;
   clearInterval(interval);
-  interval = setInterval(() => {event.target.innerText = event.target.dataset.value.split("").map((_letter, index) => {if(index < iteration) {return event.target.dataset.value[index];}return loads[Math.floor(Math.random() * 62)]}).join("");if(iteration >= event.target.dataset.value.length){clearInterval(interval);} iteration += 1 / 3;}, 30);
-  setTimeout(unload, 2500);
+  interval = setInterval(() => {loaderText.innerText = value.split("").map((_letter, index) => {if(index < iteration) {return value[index];}return chars[Math.floor(Math.random() * chars.length)]}).join("");if(iteration >= value.length){clearInterval(interval);} iteration += 3 / value.length;}, 30);
+  setTimeout(unload, 3000);
 }
 
 function unload(){
   loader.style.zIndex = 0;
   loader.style.opacity = 0;
 }
+
+loaderText.ontouchend = t => {document.documentElement.requestFullscreen(); setTimeout(load, 500);}
+loaderText.onclick = c =>{document.documentElement.requestFullscreen(); setTimeout(load, 500);}
 //loaderEnd
 
 function show() {

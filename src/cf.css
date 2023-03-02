@@ -181,6 +181,11 @@
   color: #666;
 }
 
+.light .contact-form-cf input.element,
+.light .contact-form-cf textarea.element {
+  color: #333;
+}
+
 .dark .contact-form-cf .element:hover {
   border-color: #724f9680;
 }

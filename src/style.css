@@ -38,7 +38,7 @@ body{
     background-position: 50% 50%;
   }
 
-.pre-loader {
+.loader {
     position: fixed;
     z-index: 99999;
     background-color: #100b16;
