@@ -2,6 +2,8 @@ const image = document.querySelector('.image');
 const hover = document.querySelector('.hover');
 const modal = document.querySelector('.modal');
 const close = document.querySelector('.close');
+const follow = document.querySelector('.follow');
+const card = document.querySelector('.card');
 
 //loaderStart
 const loader = document.getElementById('loader');
@@ -64,6 +66,8 @@ toggle.addEventListener('change', function () {
      if (!toggle.checked) {
           container.className = 'light';
           part.style.backgroundColor = "#eed1ff";
+          card.style.setProperty('--anim', 'cardLightGradient .3s ease-in-out forwards')
+          follow.style.animation = 'followLightGradient .3s ease-in-out forwards'
           particlesJS("particles-js", {
                particles: {
                  number: { value: 100, density: { enable: true, value_area: 800 } },
@@ -104,6 +108,8 @@ toggle.addEventListener('change', function () {
      else {
           container.className = 'dark';
           part.style.backgroundColor = "#100b16";
+          card.style.setProperty('--anim', 'cardDarkGradient .3s ease-in forwards')
+          follow.style.animation = 'followDarkGradient .3s ease-in-out forwards'
           particlesJS("particles-js", {
                particles: {
                  number: { value: 100, density: { enable: true, value_area: 800 } },
