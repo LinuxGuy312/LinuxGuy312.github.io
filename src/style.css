@@ -847,7 +847,7 @@ h1:hover {
 
 @keyframes cardDarkGradient {
     0% {
-        background: linear-gradient(to top, #7F00FF, #E100FF);
+        background-image: linear-gradient(to top, #7F00FF, #E100FF);
     }
     100% {
         background: #734f96;
@@ -859,13 +859,13 @@ h1:hover {
         background: #734f96;
     }
     100% {
-        background: linear-gradient(to top, #7F00FF, #E100FF);
+        background-image: linear-gradient(to top, #7F00FF, #E100FF);
     }
 }
 
 @keyframes followDarkGradient {
     0% {
-        background: linear-gradient(to right, #7F00FF, #E100FF);
+        background-image: linear-gradient(to right, #7F00FF, #E100FF);
     }
     100% {
         background: #734f96;
@@ -877,6 +877,6 @@ h1:hover {
         background: #734f96;
     }
     100% {
-        background: linear-gradient(to right, #7F00FF, #E100FF);
+        background-image: linear-gradient(to right, #7F00FF, #E100FF);
     }
 }

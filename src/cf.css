@@ -128,11 +128,11 @@
 }
 
 .dark .contact-form-cf .title {
-    color: #fff;
+  color: #fff;
 }
 
 .light .contact-form-cf .title {
-    color: #666;
+  color: #666;
 }
 
 .contact-form-cf div.element {
@@ -226,7 +226,7 @@
 }
 
 .light .contact-form-cf .color {
-  background: linear-gradient(90deg, #7F00FF60, #E100FFdd 51%,  #7F00FF) var(--x, 0)/ 200%;
+  background-image: linear-gradient(90deg, #7F00FF60, #E100FFdd 51%,  #7F00FF) var(--x, 0)/ 200%;
   color: #fff !important;
   backdrop-filter: blur(5px);
   margin: none;
@@ -239,7 +239,7 @@
 }
 
 .light .contact-form-cf .form-button {
-  background: linear-gradient(90deg, #7F00FF, #E100FF 51%,  #7F00FF) var(--x, 0)/ 200%;
+  background-image: linear-gradient(90deg, #7F00FF, #E100FF 51%,  #7F00FF) var(--x, 0)/ 200%;
   color: white;
 }
 
