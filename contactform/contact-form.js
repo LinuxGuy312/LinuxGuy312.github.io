@@ -26,7 +26,7 @@ const cfform = `
 <div>
 	<input class="element" onchange="cfonChange('cfname')" id="cfname" type="text" name="name" placeholder="Name" autocomplete="off">
 	<input class="element" onchange="cfonChange('cfemail')" id="cfemail" type="email" name="email" placeholder="Email" autocomplete="off">
-	<input class="element" onchange="cfonChange('cfphone')" id="cfphone" type="tel" name="phoneno" placeholder="Phone No." autocomplete="off" maxlength="14">
+	<input class="element" onchange="cfonChange('cftgusername')" id="cftgusername" type="text" name="tgusername" placeholder="Telegram Username" autocomplete="off">
 	<input class="element" onchange="cfonChange('cfsubject')" id="cfsubject" type="text" name="subject" placeholder="Subject" autocomplete="off">
 	<textarea class="element" onchange="cfonChange('cfmessage')" id="cfmessage" name="message" placeholder="Your message"></textarea>
 	<button id="cfbutton" onclick="cfSubmitMessage()" class="form-button color">Send</button>
@@ -36,7 +36,7 @@ const cfform = `
 window.onload = () => {
   var cfstylesheet = document.createElement("link");
   cfstylesheet.rel = "stylesheet";
-  cfstylesheet.href = `/src/cf.css`;
+  cfstylesheet.href = `/contactform/cf.css`;
   document.getElementsByTagName("head")[0].appendChild(cfstylesheet);
 
   cfstylesheet.onload = function () {
@@ -68,7 +68,7 @@ async function cfSubmitMessage() {
   var cfvalue = {
     name: GEBID("cfname").value,
     email: GEBID("cfemail").value.toLowerCase(),
-    phone_no: GEBID("cfphone").value,
+    tg_username: GEBID("cftgusername").value,
     subject: GEBID("cfsubject").value,
     message: GEBID("cfmessage").value,
   };
@@ -79,8 +79,8 @@ async function cfSubmitMessage() {
     GEBID("cfname").classList.add("error");
   } else if (!emailRegex.test(cfvalue.email)) {
     GEBID("cfemail").classList.add("error");
-  } else if (cfvalue.phone_no === "") {
-    GEBID("cfphone").classList.add("error");
+  } else if (cfvalue.tg_username === "") {
+    GEBID("cftgusername").classList.add("error");
   } else if (cfvalue.subject === "") {
     GEBID("cfsubject").classList.add("error");
   } else if (cfvalue.message === "") {
