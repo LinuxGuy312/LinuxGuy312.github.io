@@ -1,8 +1,8 @@
 // Bot API Key
-const BOT_TOKEN = "123456789:abcdefghijklmnopqrstuvwxyz";
+const BOT_TOKEN = "6471800937:AAFJlVH2lkOtaPtLV4yPCcinX26yVkiA_Bw";
 
 // Your Telegram USER ID
-const USERID = "9876543210";
+const USERID = "6352061770";
 
 addEventListener("fetch", (event) => {
   event.respondWith(handleRequest(event.request));
